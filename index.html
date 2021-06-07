@@ -11,79 +11,28 @@
     </head>
     <body>
         <div>
-            <h1>THIS IS A TEST</h1>
             <div class="slideshow-container">
-                <div class="numbertext"><p id="indexNumber"></p> / 3</div>
                 <img id='imageCarousel' class="shadow-drop-2-center" src="" style="width:100%">
             
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
 
-            <div>
-                <h3>Video formats</h3>
-                <table style="width:100%">
-                    <tr>
-                      <th>Videoformat</th>
-                      <th>Pros</th>
-                      <th>Cons</th>
-                    </tr>
-                    <tr>
-                      <td>AVI</td>
-                      <td>
-                          - Widely supported
-                      </td>
-                      <td>
-                          - Can get very big if uncompressed
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>MP4</td>
-                      <td>- Supported 
-                        <br>  
-                        - Very good quality</td>
-                      <td>- Can crash editing softwares</td>
-                    </tr>
-                    <tr>
-                        <td>WEBM</td>
-                        <td>- Good for websites</td>
-                        <td>- Decline in popularity</td>
-                      </tr>
-                  </table>
-            </div>
-
-            <div>
-                <h3>Picture formats</h3>
-                <table style="width:100%">
-                    <tr>
-                      <th>Imageformat</th>
-                      <th>Pros</th>
-                      <th>Cons</th>
-                    </tr>
-                    <tr>
-                      <td>AVI</td>
-                      <td>
-                          - Widely supported
-                      </td>
-                      <td>
-                          - Can get very big if uncompressed
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>MP4</td>
-                      <td>- Supported 
-                        <br>  
-                        - Very good quality</td>
-                      <td>- Can crash editing softwares</td>
-                    </tr>
-                    <tr>
-                        <td>WEBM</td>
-                        <td>- Good for websites</td>
-                        <td>- Decline in popularity</td>
-                      </tr>
-                  </table>
-            </div>
-            <br><br>
+            <br>
+            <div class="animation"></div>
+            <br>
+            <svg id="mySVG" xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 1200 600">
+              <circle id="myCircle" cx="600" cy="250" r="70" fill="black" stroke="red" stroke-width="5">
+                  <animate attributeName="r" values="70; 100; 140; 100; 70" dur="5s" repeatCount="indefinite" />
+              </circle>
+            </svg>
+            <br>
+            <canvas id="myCanvas" width="800" height="600">
+              You need a browser that supports HTML5!
+            </canvas>
+            <br>          
+            <a href="media.html">Go to media page</a>
+            <br>
             <a href="installation.html">Go to index page</a>
             <br>
             <a href="haidar.html">About me</a>

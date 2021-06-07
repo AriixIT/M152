@@ -26,52 +26,58 @@
   border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.animation {
+  width: 100px;
+  height: 100px;
+  animation: slide 4s linear infinite;
 }
 
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+.svgAnimation {
+  animation: sizeChange 4s infinite;
 }
 
-
-.shadow-drop-2-center {
-	-webkit-animation: shadow-drop-2-center 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: shadow-drop-2-center 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+canvas {
+  border: 1px solid #999;
 }
 
- @-webkit-keyframes shadow-drop-2-center {
+@keyframes slide {
   0% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    position: relative;
+    left: 0%;
+    background-color: red;
+  }
+  25% {
+    position: relative;
+    left: 25%;
+    background-color: purple;
+  }
+  50% {
+    position: relative;
+    left: 50%;
+    background-color: blue;
+  }
+  75% {
+    position: relative;
+    left: 75%;
+    background-color: aqua;
   }
   100% {
-    -webkit-transform: translateZ(50px);
-            transform: translateZ(50px);
-    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
-            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    position: relative;
+    left: 105%;
+    background-color: green;
   }
 }
 
-@keyframes shadow-drop-2-center {
+@keyframes sizeChange {
   0% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 200% 200%;
   }
   100% {
-    -webkit-transform: translateZ(50px);
-            transform: translateZ(50px);
-    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
-            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    background-size: 100% 100%;
   }
 }
+
+
